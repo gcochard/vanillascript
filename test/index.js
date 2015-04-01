@@ -1,7 +1,9 @@
 /*eslint-env mocha*/
+/*eslint-disable no-sync*/
 'use strict';
 var child_process = require('child_process');
 var path = require('path');
+var fs = require('fs');
 var assert = require('assert');
 var runWith = function(args,cb){
     args = ['cover','--report','none','--print','none','--include-pid',path.resolve(__dirname,'..','index.js'),'--'].concat(args);
@@ -27,6 +29,12 @@ describe('vanillascript',function(){
         });
 
         it('should complain when it cannot write a file',function(done){
+            try{
+            fs.openSync(path.resolve(__dirname,'fixtures/test3.js'),'a');
+            } catch(e){
+                // ignored
+            }
+            fs.chmodSync(path.resolve(__dirname,'fixtures/test3.js'),parseInt('444',8));
             runWith(['-c','test/fixtures/test3.vs'],assertExitCode.bind(null,done));
         });
 

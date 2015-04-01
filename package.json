@@ -8,7 +8,7 @@
     "vanillascript": "index.js"
   },
   "scripts": {
-    "test": "rm -rf coverage/ ; mocha --timeout 5000 --slow 2000 ; istanbul report",
+    "test": "rm -rf coverage/ ; mocha --timeout 5000 --slow 2000 && istanbul report",
     "lint": "eslint **/*.js"
   },
   "repository": {
