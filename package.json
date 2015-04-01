@@ -1,6 +1,6 @@
 {
   "name": "vanillascript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Yet another Compile To JS Language",
   "main": "index.js",
   "bin": {
