@@ -1,4 +1,5 @@
-# VanillaScript
+# VanillaScript [![Build Status](https://img.shields.io/travis/gcochard/vanillascript.svg?style=flat)](https://travis-ci.org/gcochard/vanillascript) [![Coverage Status](https://img.shields.io/coveralls/gcochard/vanillascript.svg?style=flat)](https://coveralls.io/r/gcochard/vanillascript) 
+[![NPM](https://nodei.co/npm/vanillascript.png?compact=true)](https://nodei.co/npm/vanillascript/)
 
 Yet Another Compile To JavaScript Language
 
