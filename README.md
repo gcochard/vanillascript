@@ -22,6 +22,3 @@ Compile a script:
 vanillascript -c source.vs [-o dest.js]
 ```
 It's that easy!
-
-## TODO
-- More Testing

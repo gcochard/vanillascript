@@ -3,20 +3,14 @@
 var child_process = require('child_process');
 var path = require('path');
 var assert = require('assert');
-var istanbul = require('istanbul');
-var idx = 0;
 var runWith = function(args,cb){
-    var args = ['cover','--report','none','--print','none','--include-pid',path.resolve(__dirname,'..','index.js'),'--'].concat(args);
+    args = ['cover','--report','none','--print','none','--include-pid',path.resolve(__dirname,'..','index.js'),'--'].concat(args);
     child_process.execFile('istanbul',args,cb);
 };
 
-function assertExitCode(done,err,stdout){
+function assertExitCode(done,err){
     assert(err);
     done();
-}
-function assertWarn(done,err,stdout,stderr){
-    assert(stderr);
-    done(err);
 }
 function assertOut(done,err,stdout,stderr){
     assert(stdout);
