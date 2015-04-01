@@ -19,6 +19,6 @@ vanillascript source.vs
 ```
 Compile a script:
 ```bash
-vanillascript -c source.vs [-o dest.js]
+vanillascript -c source.vs
 ```
 It's that easy!
